@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+/* CSS Variables for fonts */
+:root {
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Light theme colors */
@@ -23,6 +31,7 @@
 /* Dark theme colors */
 .dark {
   background-color: #121212;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --sh-class: #4c97f8;
   --sh-identifier: white;
   --sh-sign: #8996a3;
@@ -37,6 +46,10 @@
 html {
   min-width: 360px;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
 }
 
 .prose {
@@ -149,4 +162,86 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* Professional button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(107, 114, 128, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: rgba(107, 114, 128, 1);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+.card-subtle {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-subtle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.text-gradient-subtle {
+  background: linear-gradient(135deg, #e5e7eb, #9ca3af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent {
+  color: #0ea5e9;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Professional scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.6);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.8);
 }

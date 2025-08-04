@@ -8,29 +8,35 @@ const navItems = {
   "/projects": { name: "Projects" },
   "/extracurriculars": { name: "Extracurriculars" },
   "/fun": { name: "Fun" },
-  "/resume": { name: "Resume" },
 };
 
 export function Navbar() {
   return (
     <nav className="lg:mb-16 mb-12 py-4">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="text-[28px] font-semibold tracking-tight">
+        <div className="flex items-center mb-6 md:mb-0">
+          <Link 
+            href="/" 
+            className="text-2xl font-bold tracking-tight bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
+          >
             {metaData.title}
           </Link>
         </div>
-        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
+        
+        <div className="flex flex-wrap gap-6 items-center">
           {Object.entries(navItems).map(([path, { name }]) => (
             <Link
               key={path}
               href={path}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
+              className="text-gray-600 dark:text-gray-300 hover:text-accent-blue dark:hover:text-accent-blue transition-colors duration-300 font-medium"
             >
               {name}
             </Link>
           ))}
-          <ThemeSwitch />
+          
+          <div className="ml-2">
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
     </nav>
