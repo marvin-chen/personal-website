@@ -29,6 +29,23 @@ export default function ContactForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Client-side validation
+    if (!formData.name.trim()) {
+      alert('Please enter your name');
+      return;
+    }
+    
+    if (!formData.email.trim()) {
+      alert('Please enter your email address');
+      return;
+    }
+    
+    if (!formData.message.trim()) {
+      alert('Please enter a message');
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -111,7 +128,7 @@ export default function ContactForm() {
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaUser className="inline w-4 h-4 mr-2" />
-              Name
+              Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -129,7 +146,7 @@ export default function ContactForm() {
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               <FaEnvelope className="inline w-4 h-4 mr-2" />
-              Email
+              Email <span className="text-red-500">*</span>
             </label>
             <input
               type="email"
@@ -165,7 +182,7 @@ export default function ContactForm() {
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             <FaComment className="inline w-4 h-4 mr-2" />
-            Message
+            Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"
