@@ -1,10 +1,10 @@
-# Marvin Chen's Portfolio - Improvements in Progress
+# Marvin Chen's Portfolio 
 
 This portfolio is built using Nextfolio, a clean, fast, and lightweight portfolio template powered by [Next.js](https://nextjs.org/), [Vercel](https://vercel.com/), and [Tailwind CSS](https://tailwindcss.com/).
 
 ## About This Portfolio
 
-This site showcases my professional experience, projects, and skills as a Computer Science student at Princeton University. It's designed to provide a comprehensive overview of my academic and professional journey in the field of technology.
+This site showcases my professional experience, projects, and skills as a Computer Science student at Princeton University. It's designed to provide a comprehensive overview of my academic and professional journey in the field of technology. Always trying to improve this website, and open to suggestions! 
 
 ## Technologies Used
 
