@@ -64,9 +64,9 @@ export default function Page() {
         <div className="lg:col-span-2 space-y-6">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-lg leading-relaxed">
-              I'm a third-year <strong>Computer Science</strong> student at 
+              I'm a fourth-year <strong>Computer Science</strong> student at 
               <strong> Princeton University</strong> with minors in 
-              <strong> Finance</strong> and <strong> East Asian Studies</strong>.
+              <strong> Finance</strong> and <strong> East Asian Studies</strong>, graduating in Spring 2026.
             </p>
             
             <p className="text-lg leading-relaxed">

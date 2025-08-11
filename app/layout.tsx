@@ -81,9 +81,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >          
-          <main className="relative z-10 flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[900px] w-full mx-auto">
+          <main className="relative z-10 flex-auto min-w-0 mt-2 md:mt-6 px-6 sm:px-4 md:px-0 max-w-[900px] w-full mx-auto">
             <Navbar />
-            <div className="flex-1">
+            <div>
               {children}
             </div>
             <Footer />
