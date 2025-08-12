@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { SiReact, SiPython, SiTensorflow, SiTypescript } from "react-icons/si";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -13,8 +12,6 @@ const projects = [
     title: "Signable",
     description: "ASL flashcard app with side-by-side comparison feature designed to help users learn American Sign Language through interactive visual learning.",
     techStack: ["HTML", "CSS", "Javascript", "Bootstrap", "Flask", "Jinja2", "Docker"],
-    github: "https://github.com/ep1401/Signable",
-    icon: SiReact,
     color: "accent-blue",
     category: "Web Application"
   },
@@ -23,7 +20,6 @@ const projects = [
     description: "Novel multimodal neural network that combines image recognition and numerical data analysis to accurately classify Pokémon species.",
     techStack: ["Matplotlib", "Scikit-learn", "Python", "TensorFlow"],
     github: "https://github.com/marvin-chen/cos-independent-work",
-    icon: SiTensorflow,
     color: "accent-emerald",
     category: "Machine Learning"
   },
@@ -32,7 +28,6 @@ const projects = [
     description: "User-friendly interface for peer-to-peer commerce on campus, facilitating safe and convenient transactions between students.",
     techStack: ["Svelte", "Typescript"],
     github: "https://github.com/tigerappsorg/tigerretail-2",
-    icon: SiTypescript,
     color: "accent-purple",
     category: "E-commerce Platform"
   },
@@ -41,7 +36,6 @@ const projects = [
     description: "Official email distribution system for clubs and organizations, efficiently serving over 5,000 students across campus.",
     techStack: ["Typescript", "Go"],
     github: "https://github.com/HoagieClub/mail",
-    icon: SiPython,
     color: "accent-amber",
     category: "Communication System"
   }
@@ -52,7 +46,7 @@ export default function Projects() {
     <div className="min-h-screen py-12">
       {/* Header */}
       <div className="text-center mb-16 animate-fade-in-up">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent leading-relaxed pb-2">
           Projects
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -63,7 +57,6 @@ export default function Projects() {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {projects.map((project, index) => {
-          const IconComponent = project.icon;
           return (
             <div 
               key={index} 
@@ -73,16 +66,13 @@ export default function Projects() {
               <div className="relative z-10">
                 {/* Project header */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="flex items-center">
-                    <IconComponent className={`w-8 h-8 text-${project.color} mr-4`} />
-                    <div>
-                      <h2 className="text-2xl font-bold mb-1">
-                        {project.title}
-                      </h2>
-                      <span className={`text-${project.color} text-sm font-medium`}>
-                        {project.category}
-                      </span>
-                    </div>
+                  <div>
+                    <h2 className="text-2xl font-bold mb-1">
+                      {project.title}
+                    </h2>
+                    <span className={`text-${project.color} text-sm font-medium`}>
+                      {project.category}
+                    </span>
                   </div>
                 </div>
 
@@ -109,16 +99,18 @@ export default function Projects() {
                 </div>
 
                 {/* GitHub Link */}
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={`inline-flex items-center gap-2 px-6 py-3 bg-${project.color} text-white rounded-lg hover:bg-${project.color}/90 transition-colors duration-300`}
-                >
-                  <FaGithub className="w-4 h-4" />
-                  View on GitHub
-                  <FaExternalLinkAlt className="w-3 h-3" />
-                </a>
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={`inline-flex items-center gap-2 px-6 py-3 bg-${project.color} text-white rounded-lg hover:bg-${project.color}/90 transition-colors duration-300`}
+                  >
+                    <FaGithub className="w-4 h-4" />
+                    View on GitHub
+                    <FaExternalLinkAlt className="w-3 h-3" />
+                  </a>
+                )}
               </div>
             </div>
           );
