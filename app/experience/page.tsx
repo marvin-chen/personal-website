@@ -1,8 +1,17 @@
 import React from 'react';
-import { FaUniversity, FaBuilding, FaChartLine, FaCode, FaDatabase, FaBriefcase } from 'react-icons/fa';
-import { SiCplusplus, SiPython, SiJavascript, SiHtml5, SiCss3, SiTableau } from 'react-icons/si';
+import { FaUniversity, FaBuilding, FaChartLine, FaBriefcase } from 'react-icons/fa';
 
 const experiences = [
+  {
+    title: "Information Technology Intern",
+    company: "L'Oréal",
+    date: "June 2025 - August 2025",
+    type: "Technology",
+    icon: FaBuilding,
+    description: "AMER Retail Omnisales Technology Team. Streamlined legacy POS integrations by producing technical documentation for 5+ interconnected systems. Piloted clienteling prototypes, streamlining online-to-offline customer flow for 3+ retail locations.",
+    techStack: ["Confluence", "POS Systems (Retail Tech)", "React", "Node.js"],
+    color: "orange-500"
+  },
   {
     title: "Computer Science Undergraduate Course Assistant",
     company: "Princeton University",
@@ -35,16 +44,6 @@ const experiences = [
   }
 ];
 
-const techIcons = {
-  "Java": FaCode,
-  "Python": SiPython,
-  "HTML/CSS": SiHtml5,
-  "JavaScript": SiJavascript,
-  "C++": SiCplusplus,
-  "Tableau": SiTableau,
-  "Excel": FaDatabase
-};
-
 export default function Experience() {
   return (
     <div className="min-h-screen py-12">
@@ -54,7 +53,7 @@ export default function Experience() {
           Work Experience
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          My journey through academia, technology, and business - building skills and making impact
+          My journey through academia, technology, and business; simultaneously building skills and making an impact
         </p>
       </div>
 
@@ -62,6 +61,45 @@ export default function Experience() {
       <div className="max-w-4xl mx-auto space-y-8">
         {experiences.map((exp, index) => {
           const IconComponent = exp.icon;
+          
+          // Define explicit color styles based on the color value
+          const getColorClasses = (color) => {
+            switch(color) {
+              case 'orange-500':
+                return {
+                  bgClass: 'bg-orange-500/10',
+                  textClass: 'text-orange-500'
+                };
+              case 'purple-600':
+                return {
+                  bgClass: 'bg-purple-600/10',
+                  textClass: 'text-purple-600'
+                };
+              case 'accent-blue':
+                return {
+                  bgClass: 'bg-blue-500/10',
+                  textClass: 'text-blue-500'
+                };
+              case 'accent-emerald':
+                return {
+                  bgClass: 'bg-emerald-500/10',
+                  textClass: 'text-emerald-500'
+                };
+              case 'accent-purple':
+                return {
+                  bgClass: 'bg-purple-500/10',
+                  textClass: 'text-purple-500'
+                };
+              default:
+                return {
+                  bgClass: 'bg-gray-500/10',
+                  textClass: 'text-gray-500'
+                };
+            }
+          };
+          
+          const colorClasses = getColorClasses(exp.color);
+          
           return (
             <div 
               key={index}
@@ -70,8 +108,8 @@ export default function Experience() {
             >
               <div className="flex items-start gap-6">
                 {/* Icon */}
-                <div className={`bg-${exp.color}/10 p-4 rounded-xl flex-shrink-0`}>
-                  <IconComponent className={`w-8 h-8 text-${exp.color}`} />
+                <div className={`${colorClasses.bgClass} p-4 rounded-xl flex-shrink-0`}>
+                  <IconComponent className={`w-8 h-8 ${colorClasses.textClass}`} />
                 </div>
 
                 {/* Content */}
@@ -80,7 +118,7 @@ export default function Experience() {
                     <div>
                       <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
                       <div className="flex items-center gap-3">
-                        <h4 className={`text-lg font-semibold text-${exp.color}`}>{exp.company}</h4>
+                        <h4 className={`text-lg font-semibold ${colorClasses.textClass}`}>{exp.company}</h4>
                         <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium">
                           {exp.type}
                         </span>
@@ -100,13 +138,11 @@ export default function Experience() {
                     <h5 className="font-semibold mb-3 text-gray-700 dark:text-gray-300">Technologies Used:</h5>
                     <div className="flex flex-wrap gap-3">
                       {exp.techStack.map((tech, techIndex) => {
-                        const TechIcon = techIcons[tech] || FaCode;
                         return (
                           <div 
                             key={techIndex}
-                            className="flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
+                            className="px-3 py-2 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
                           >
-                            <TechIcon className="w-4 h-4 text-gray-600 dark:text-gray-400" />
                             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{tech}</span>
                           </div>
                         );
@@ -125,7 +161,7 @@ export default function Experience() {
         <div className="bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold mb-4">Interested in working together?</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            I'm always open to new opportunities and exciting challenges.
+            I'm always open to new opportunities and exciting challenges!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
