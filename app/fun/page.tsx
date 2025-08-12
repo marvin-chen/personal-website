@@ -2,6 +2,11 @@ import React from 'react';
 import { FaGlobeAmericas, FaMountain, FaRobot } from 'react-icons/fa';
 import { SiPokemon } from 'react-icons/si';
 import PhotoGallery from '../components/photo-gallery';
+import dynamic from 'next/dynamic';
+
+const WordScrambleGame = dynamic(() => import('../components/word-scramble-game'), {
+  ssr: false
+});
 
 export default function Fun() {
   const funFacts = [
@@ -69,11 +74,24 @@ export default function Fun() {
         })}
       </div>
 
+      {/* Interactive Game Section */}
+      <div className="mb-16 max-w-4xl mx-auto">
+        <div className="text-center mb-8 animate-fade-in-up" style={{animationDelay: '0.15s'}}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-accent-emerald to-accent-blue bg-clip-text text-transparent">
+            Let's Play a Game!
+          </h2>
+        </div>
+        
+        <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <WordScrambleGame />
+        </div>
+      </div>
+
       {/* Photo Gallery Section */}
       <div className="mb-16">
         <div className="text-center mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-accent-emerald to-accent-blue bg-clip-text text-transparent">
-            Photo Memories
+            Traveling the World
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">
             A glimpse into my adventures and experiences
