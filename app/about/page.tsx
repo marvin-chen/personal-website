@@ -3,7 +3,7 @@ import { FaGraduationCap, FaCode, FaUsers, FaGlobeAmericas, FaDownload, FaExtern
 import { SiPython, SiJavascript, SiReact, SiTypescript } from 'react-icons/si';
 
 export default function About() {
-  const resumeLink = "https://drive.google.com/file/d/1r0Mpjg3saopHfRpFGGKkQ6tVAS5BNotD/view?usp=sharing";
+  const resumeLink = "https://drive.google.com/file/d/19t0e4GJSUy-MWfF11VoWtHLdRkO-3vYM/view?usp=sharing";
 
   const highlights = [
     {
