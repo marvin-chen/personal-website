@@ -3,7 +3,7 @@ import { FaGraduationCap, FaCode, FaUsers, FaGlobeAmericas, FaDownload, FaExtern
 import { SiPython, SiJavascript, SiReact, SiTypescript } from 'react-icons/si';
 
 export default function About() {
-  const resumeLink = "https://drive.google.com/file/d/1n8N75ERAceBj_ZuXHF6Jeaur0aIvRXkg/view?usp=sharing";
+  const resumeLink = "https://drive.google.com/file/d/1r0Mpjg3saopHfRpFGGKkQ6tVAS5BNotD/view?usp=sharing";
 
   const highlights = [
     {
@@ -17,18 +17,6 @@ export default function About() {
       title: "Technical Skills",
       description: "Proficient in Python, Java, JavaScript, and modern web development frameworks",
       color: "accent-emerald"
-    },
-    {
-      icon: FaUsers,
-      title: "Leadership",
-      description: "Leading the Chinese Language Association and serving on the Computer Science Council",
-      color: "accent-purple"
-    },
-    {
-      icon: FaGlobeAmericas,
-      title: "Languages",
-      description: "Fluent in English and Chinese, with professional proficiency in Korean",
-      color: "accent-amber"
     }
   ];
 
@@ -47,7 +35,7 @@ export default function About() {
           About Me
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          I'm Marvin Chen, a Computer Science student at Princeton University. 
+          I'm Marvin! 
           My passion lies in leveraging technology to solve complex problems and create innovative solutions.
         </p>
       </div>
@@ -63,8 +51,8 @@ export default function About() {
               and software development.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Outside of academics, I'm deeply involved in campus activities, including leading the Chinese Language Association 
-              and serving on the Computer Science Council. I believe in the power of community and continuous learning.
+              Beyond academics, I enjoy contributing to open-source projects, participating in hackathons, and engaging with 
+              the tech community. I believe in the power of collaboration and continuous learning to drive innovation.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               I'm passionate about creating impactful solutions that bridge the gap between technology and real-world problems, 
@@ -136,7 +124,7 @@ export default function About() {
             {/* Title */}
             <h3 className="text-2xl font-bold mb-3">Professional Resume</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-xl mx-auto">
-              Download or view my complete resume with detailed experience, education, and qualifications.
+              View my complete resume with detailed experience, education, and qualifications below.
             </p>
 
             {/* Action Buttons */}
@@ -154,7 +142,7 @@ export default function About() {
 
             {/* Note */}
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-4">
-              Last updated: December 2024
+              Last updated: August 2025
             </p>
           </div>
         </div>
