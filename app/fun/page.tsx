@@ -88,7 +88,7 @@ export default function Fun() {
       </div>
 
       {/* Photo Gallery Section */}
-      <div className="mb-16">
+      {/* <div className="mb-16">
         <div className="text-center mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-accent-emerald to-accent-blue bg-clip-text text-transparent">
             Traveling the World
@@ -101,7 +101,7 @@ export default function Fun() {
         <div className="animate-fade-in-up" style={{animationDelay: '0.25s'}}>
           <PhotoGallery />
         </div>
-      </div>
+      </div> */}
 
       {/* Quote Section */}
       <div className="text-center animate-fade-in-up max-w-4xl mx-auto" style={{animationDelay: '0.3s'}}>
