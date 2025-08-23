@@ -13,20 +13,20 @@ interface WordData {
 // Add new objects with word, hint, and category properties
 const techWords: WordData[] = [
   { word: 'JAVASCRIPT', hint: 'Popular web programming language', category: 'Languages' },
-  { word: 'TYPESCRIPT', hint: 'JavaScript with type safety', category: 'Languages' },
+//   { word: 'TYPESCRIPT', hint: 'JavaScript with type safety', category: 'Languages' },
   { word: 'PYTHON', hint: 'Snake-named programming language', category: 'Languages' },
   { word: 'REACT', hint: 'Facebook\'s UI library', category: 'Frameworks' },
-  { word: 'NEXTJS', hint: 'React framework for production', category: 'Frameworks' },
+//   { word: 'NEXTJS', hint: 'React framework for production', category: 'Frameworks' },
   { word: 'ALGORITHM', hint: 'Step-by-step problem solving method', category: 'Concepts' },
   { word: 'DATABASE', hint: 'Organized collection of data', category: 'Concepts' },
-  { word: 'API', hint: 'Application Programming Interface', category: 'Concepts' },
+//   { word: 'API', hint: 'Application Programming Interface', category: 'Concepts' },
   { word: 'FRONTEND', hint: 'User-facing part of applications', category: 'Development' },
   { word: 'BACKEND', hint: 'Server-side of applications', category: 'Development' },
   { word: 'DEBUGGING', hint: 'Finding and fixing code errors', category: 'Development' },
   { word: 'GITHUB', hint: 'Popular code hosting platform', category: 'Tools' },
   { word: 'TAILWIND', hint: 'Utility-first CSS framework', category: 'Tools' },
   { word: 'DOCKER', hint: 'Containerization platform', category: 'Tools' },
-  { word: 'KUBERNETES', hint: 'Container orchestration system', category: 'Tools' }
+//   { word: 'KUBERNETES', hint: 'Container orchestration system', category: 'Tools' }
 ];
 
 export default function WordScrambleGame() {
