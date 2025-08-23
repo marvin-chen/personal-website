@@ -13,7 +13,7 @@ const extracurriculars = [
   {
     title: "Chinese Language Association",
     role: "President and Senior Advisor",
-    description: "Expanded club by 200% and onboarded current board members. Led cultural events and language learning initiatives.",
+    description: "Expanded club by 250% and onboarded current board members. Led cultural events and language learning initiatives.",
     icon: FaUsers,
     color: "accent-emerald",
     category: "Leadership"
