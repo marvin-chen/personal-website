@@ -3,7 +3,7 @@ import { FaGraduationCap, FaCode, FaUsers, FaGlobeAmericas, FaDownload, FaExtern
 import { SiPython, SiJavascript, SiReact, SiTypescript } from 'react-icons/si';
 
 export default function About() {
-  const resumeLink = "https://drive.google.com/file/d/1RieD0KDSTrlhLKP7hzXTIjU2MPdEuCFD/view?usp=sharing";
+  const resumeLink = "https://drive.google.com/file/d/11IFZPgodvg4nvAYTpNK8aUfzt3xMWazl/view?usp=sharing";
 
   const highlights = [
     {
@@ -46,12 +46,12 @@ export default function About() {
           {/* Text Content */}
           <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              With a strong foundation in programming languages like Python, Java, and JavaScript, I'm always eager to learn 
+              With a strong foundation in programming, I'm always eager to learn 
               and apply new technologies. My academic journey has equipped me with skills in machine learning, data analysis, 
               and software development.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Beyond academics, I enjoy contributing to open-source projects, participating in hackathons, and engaging with 
+              Beyond academics, I enjoy contributing to open-source projects, reading up on the latest tech trends, and engaging with 
               the tech community. I believe in the power of collaboration and continuous learning to drive innovation.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -142,7 +142,7 @@ export default function About() {
 
             {/* Note */}
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-4">
-              Last updated: August 2025
+              Last updated: October 2025
             </p>
           </div>
         </div>
