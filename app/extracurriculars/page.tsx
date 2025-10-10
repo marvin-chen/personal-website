@@ -4,7 +4,7 @@ import { FaUserTie, FaUsers, FaLightbulb, FaCode, FaGraduationCap, FaHandsHelpin
 const extracurriculars = [
   {
     title: "COS (Computer Science) Council",
-    role: "Academic Chair",
+    role: "President",
     description: "Spearhead initiatives to improve students' academic experiences and bridge communication between students and faculty.",
     icon: FaUserTie,
     color: "accent-blue",
@@ -28,7 +28,7 @@ const extracurriculars = [
   },
   {
     title: "Association of Computing Machinery (ACM)",
-    role: "Member",
+    role: "Workship Chair",
     description: "Regularly practiced competitive programming skills and enhanced data structures and algorithms knowledge through workshops and competitions.",
     icon: FaCode,
     color: "accent-amber",
