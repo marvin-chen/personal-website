@@ -28,7 +28,7 @@ const extracurriculars = [
   },
   {
     title: "Association of Computing Machinery (ACM)",
-    role: "Workship Chair",
+    role: "Workshop Chair",
     description: "Regularly practiced competitive programming skills and enhanced data structures and algorithms knowledge through workshops and competitions.",
     icon: FaCode,
     color: "accent-amber",
