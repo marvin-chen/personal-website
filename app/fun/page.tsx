@@ -4,9 +4,7 @@ import { SiPokemon } from 'react-icons/si';
 import PhotoGallery from '../components/photo-gallery';
 import dynamic from 'next/dynamic';
 
-const WordScrambleGame = dynamic(() => import('../components/word-scramble-game'), {
-  ssr: false
-});
+const WordScrambleGame = dynamic(() => import('../components/word-scramble-game'));
 
 export default function Fun() {
   const funFacts = [
